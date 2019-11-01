@@ -1,13 +1,12 @@
-import sys
-import random
-import copy
+import sys # for getting an input file
+import random # for choosing a literal l
+import copy # for deepcopying a list
 
 input = sys.argv[1] # input file
 clauseset = []
 
 # remove all l in the list
 def removeAllOccur(l, i):
-
     try:
         while True : l.remove(i)
     except ValueError:
@@ -51,7 +50,7 @@ def unitPropagation(clauseset):
 			return clauseset
 
 		print "-"*80
-		print "START UNIT PROPAGATION: [\'"+str(l)+"\']"
+		print "UNIT PROPAGATION: [\'"+str(l)+"\']"
 
 		# delete clauses containing l from S 
 		for i in range(len(clauseset)):
@@ -127,14 +126,14 @@ def DPLL(clauseset):
 	return False
 
 if __name__ == "__main__":
+	# call preprocess
 	preprocess()
-	print "-"*80	
-	print "INPUT: "+str(clauseset)
+	print "-"*80
+	print "START DPLL"			
+	print "INPUT: "+str(clauseset)	
 
-	print "-"*80	
-	print "START DPLL"	
+	# call DPLL
 	result = DPLL(clauseset)
-
 	print "-"*80
 	if(result): print "OUTPUT: SATISFIABLE"
 	else: print "OUTPUT: UNSATISFIABLE"
