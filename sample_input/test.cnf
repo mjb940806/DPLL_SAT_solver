@@ -1,0 +1,11 @@
+c
+c FILE: sample01-simple.cnf
+c NOTE: Not satisfiable
+c
+p cnf 3 2
+-1 2 3 0
+1 0
+-2 3 0
+-2 -3 0
+2 3 0
+2 -3 0
