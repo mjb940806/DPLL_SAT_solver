@@ -1,7 +1,7 @@
 [IMS697 2019 FW] DPLL 알고리즘을 사용하는 SAT Solver 구현
 ======================
 ## 1. 동작환경
-Python2.7
+Python2.7, macOS Catalina
 ## 2. 가정사항
 - 입력 파일은 DIMACS 포맷이다.
 - 입력 파일 내의 공백은 스페이스 한 칸으로 간주한다.
